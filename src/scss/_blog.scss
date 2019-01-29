@@ -1,14 +1,69 @@
-.page-header{
-  .desen{
-    background-image: url("../images/footer-desen.png") ;
-    background-repeat: repeat-x;
-    @include transform(rotate(180deg));
-    width: 100%;
-    height: 35px;
+.page-blog{
+  .blog-desc{
+    .blog-img{
+      width: 100%;
+      @include shadow(1px 1px 11px -3px $color-4);
+    }
+    .media{
+      margin-top: 30px;
+      .media-sol{
+        margin-right: 30px;
+        background: $color-2;
+        color: $color-1;
+        text-align: center;
+        padding: 25px 15px;
+        .rakam{
+          font-weight: bold;
+          display: block;
+          font-size: 18px;
+        }
+        .ay{
+          font-size: 12px;
+          display: block;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .media-body{
+      .time{
+        color: $color-1;
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+      h2{
+        font-family: "Open Sans Semi Bold";
+        font-size: 17px;
+        color: $color-1;
+      }
+      p{
+        font-size: 14px;
+        text-align:justify;
+      }
+    }
   }
-  .title{
-    font-family: Courgette;
-    color: #cbc495;
-    font-size: 30px;
+  .widget{
+    h5{
+      font-family: "Open Sans Semi Bold";
+      font-size: 15px;
+      color: $color-1;
+      margin-bottom: 30px;
+    }
+    .media{
+      border-bottom: 1px solid $color-1;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      img{
+        @include shadow(1px 1px 11px -3px $color-4);
+        margin-right: 15px;
+      }
+      a{
+        display: flex;
+        color: $color-1;
+      }
+      .media-body{
+        font-size: 14px;
+
+      }
+    }
   }
 }

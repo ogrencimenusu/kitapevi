@@ -8,6 +8,24 @@ body{
   font-size: 16px;
   font-family: 'Open Sans Regular', sans-serif;
 }
+.page-content{
+  .page-header{
+    .desen{
+      background-image: url("../images/footer-desen.png") ;
+      background-repeat: repeat-x;
+      @include transform(rotate(180deg));
+      width: 100%;
+      height: 35px;
+    }
+    .title{
+      font-family: Courgette;
+      color: #cbc495;
+      font-size: 30px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+}
 .open{
   left: 0px !important;
 }
@@ -192,7 +210,7 @@ h3{
 }
 .btn-accent{
   color: #5a1a1e !important;
-  background: #e4dfbd;
+  background: $color-2;
   display: inline-block;
   padding: 7px 24px;
   border-radius: 10px;
@@ -232,7 +250,7 @@ header{
 }
 .bizi-taniyin{
   background-image: url("../images/bizi-taniyin-bg.jpg");
-  color: #e4dfbd;
+  color: $color-2;
   padding: 50px 0px;
   text-align: center;
   h3{
