@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Kitap Evi Otel - Hakkımızda</title>
+    <title>Kitap Evi Otel - Galeri</title>
 
     <link rel="icon" href="assets/images/favicon.ico" sizes="32x21" type="image/x-icon">
 
@@ -13,6 +13,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap-4.2.1/css/bootstrap.min.css">
+
+    <!-- Magnificpopup CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/magnificpopup-1.1/magnific-popup.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/_my/app.min.css">
@@ -73,39 +76,120 @@
                 <img src="assets/images/kitapevi-logo.png" alt="">
             </a>
         </header>
-        <section class="page-content page-hakkimizda">
+        <section class="page-content page-galeri">
             <section class="page-header">
-                <img src="assets/images/page-hakkimizda.jpg" alt="">
+                <img src="assets/images/page-galeri.jpg" alt="">
                 <div class="desen"></div>
-                <h1 class="title">
-                    Hakkımızda
-                </h1>
+                <div class="container">
+                    <h1 class="title">
+                        Galeri
+                    </h1>
+                </div>
             </section>
             <div class="container">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills mb-3 filters" id="filters" >
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#pills-home">
-                            Kitap Evi Otel Hakkında
+                        <a href="#" class="nav-item nav-link " data-filter=".RveB">
+                            Restaurant & Bar ( 29 )
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#pills-profile">
-                            Kitap Evi Otel Tarihi
+                        <a href="#" class="nav-item nav-link " data-filter=".CumbaSuit">
+                            Cumba Suit ( 12 )
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#pills-contact">
-                            Kitap Evi Otel Ailesi
+                        <a href="#" class="nav-item nav-link " data-filter=".CatiSuit">
+                            Çatı Suit ( 12 )
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-item nav-link " data-filter=".HamamSuit">
+                            Hamam Suit ( 12 )
                         </a>
                     </li>
                 </ul>
                 <div class="tab-content text-center mb-5 mt-5" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
-                        Bursa tatil veya iş seyahati için gelenlere sadece şehrin geçmişe tanıklığı ile değil farklı tarzlar ve seçenekleri suna
-                        n Bursa otelleri ve bursa otel fiyatları ile şehre özel bursa konaklama ayrıcalıkları sunmaktadır. Son yıllarda turizm atılımı gerçekleştiren Bursa oteller konusunda da zenginleşmiştir.
-                        <br>
-                        <br>
-                        Kitap Evi Otel Bursa, Bursa merkez otelleri nden olup kaplıca merkezine yakın konumu, şık odaları butik servisi ile – her ne kadar turizm belgemiz olsa da Turizm Bakanlığı tarafından butik otel tanımını kullanmamız yasaklansa da - sabah uyandığınızda Bursa Türkiye de olduğunuzu anlayabileceğiniz en özel seçkin Bursa hotel idir. Eminiz Kitap evi Hotel Bursa ile şehri yeniden fark edeceksinizBazen bir şömine sıcaklığı, bazen bir manolya gölgesi, bazen de Bursa’da olduğunuzu hatırlatan hamam sefası.
+                        <div class="zoom-gallery" id="firmalar">
+                            <div class="galeri-items CumbaSuit">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-8.jpg">
+                                        <img src="assets/images/galeri/galeri-8.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items CumbaSuit">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-1.jpg">
+                                        <img src="assets/images/galeri/galeri-1.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items CumbaSuit">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-6.jpg">
+                                        <img src="assets/images/galeri/galeri-6.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-1.jpg">
+                                        <img src="assets/images/galeri/galeri-1.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-2.jpg">
+                                        <img src="assets/images/galeri/galeri-2.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-3.jpg">
+                                        <img src="assets/images/galeri/galeri-3.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-4.jpg">
+                                        <img src="assets/images/galeri/galeri-4.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-5.jpg">
+                                        <img src="assets/images/galeri/galeri-5.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-6.jpg">
+                                        <img src="assets/images/galeri/galeri-6.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-7.jpg">
+                                        <img src="assets/images/galeri/galeri-7.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="galeri-items RveB">
+                                <div class="card">
+                                    <a href="assets/images/galeri/galeri-8.jpg">
+                                        <img src="assets/images/galeri/galeri-8.jpg" class="card-img" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel">
                         Kitap evi Otel birbirinden farklı  13 oda ile sadece konakladığınız değil, anılarla ayrılacağınız bir yer. Ova manzaralı odalardan Uludağın eteklerine uzanan şehir, Ulucami,  Yeşil Türbe, Emirsultan, Yıldırım Külliyesi, Hanlar bölgesi ve Kapalıçarşı izlenebildiği gibi,
@@ -113,6 +197,7 @@
                         Osmanlı adabı taşıyan yüksek taş duvarlarla çevrili huzur dolu bahçeye bakan odalardan tarihi semtin hikayeler taşıyan sokakları görülebilmekte. Bir zamanlar içerisinden tarihi Pınarbaşı suyu geçermiş bahçenin. Şehrin tüm suları biraraya toplanınca adı artık sadece tapu kayıtlarında kalmış. Sular şehri Bursa‘da olduğunuzu hatırlayın diye hemen her odanın banyoları özel. Bazı odalarda dinlenme kuvetleri bulunuyor, bazılarında da hamamlar. İçerisinde girdiğinizde zamanın durduğunu hissettiğiniz Kitapevi restaurant... Geçmiş özlenen zamanların sükuneti, zerafeti. Bahçesi, ulu ağaçları, şömine başı sohbetleri, kitapları. Kitap evi Otel ile şehri yeniden farkedeceksiniz. Evinizden uzakta, Kitap evi Otelden anılar biriktirmeniz dileğiyle.
                     </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel">Kitap evi otel ailesi</div>
+                    <div class="tab-pane fade" id="pills-hamam" role="tabpanel">Hamam</div>
                 </div>
             </div>
         </section>
@@ -204,10 +289,16 @@
 <script src="assets/popper-1.14.6/popper.min.js"></script>
 <script src="assets/bootstrap-4.2.1/js/bootstrap.min.js"></script>
 
+<!-- Magnificpopup JS -->
+<script src="assets/magnificpopup-1.1/magnific-popup.min.js"></script>
+
+<!-- isotope JS -->
+<script src="assets/isotope-3.0.6/isotope.pkgd.min.js"></script>
+
 <!-- Main JS -->
 <script src="assets/_my/main.js"></script>
 
-<!-- Anasayfa JS -->
-<script src="assets/_my/anasayfa.js"></script>
+<!-- Galeri JS -->
+<script src="assets/_my/galeri.js"></script>
 </body>
 </html>

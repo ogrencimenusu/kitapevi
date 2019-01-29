@@ -1,5 +1,5 @@
 
-.page-hakkimizda{
+.page-hakkimizda,.page-galeri{
   .nav-pills{
     margin-top: 30px;
     border-bottom: 3px solid $color-2;
@@ -12,7 +12,7 @@
       &:after{
         content: '';
         position: absolute;
-        border-right: 1px solid $color-1;
+        border-right: 2px solid $color-1;
         right: 0;
         top: calc(80% - 25px);
         height: 25px;
