@@ -1,0 +1,14 @@
+.page-header{
+  .desen{
+    background-image: url("../images/footer-desen.png") ;
+    background-repeat: repeat-x;
+    @include transform(rotate(180deg));
+    width: 100%;
+    height: 35px;
+  }
+  .title{
+    font-family: Courgette;
+    color: #cbc495;
+    font-size: 30px;
+  }
+}

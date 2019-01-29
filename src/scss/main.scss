@@ -1,0 +1,444 @@
+@import "../fonts/Courgette/courgette.css";
+@import "../fonts/Opensans/opensans.css";
+@import 'mixin';
+@import 'blog';
+
+body{
+  background: $color-3;
+  font-size: 16px;
+  font-family: 'Open Sans Regular', sans-serif;
+}
+.open{
+  left: 0px !important;
+}
+.nav-toggle{
+  display: none;
+  position: absolute;
+  top: calc(50% - 40px);
+  right: -40px;
+  .buton{
+    color: $color-2;
+    font-size: 20px;
+    height: 40px;
+    text-align: center;
+    top: calc(50% - 50px);
+    border: 1px solid $color-2;
+    border-left: 0;
+    border-radius: 0 100px 100px 0;
+    cursor: pointer;
+    width: 40px;
+    align-items: center;
+    padding-right: 10px;
+    display: flex;
+    box-shadow: 3px 1px 1px -2px $color-4;
+    text-shadow: 1px 1px 1px #989898;
+    i{
+      margin: auto;
+    }
+  }
+
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+#sidebar{
+  padding: 75px 0px;
+  display: flex;
+  background: rgba($color-2, .22);
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  @include transition(300ms all);
+
+  ul.menu{
+    width: 100%;
+    padding: 0px 25px;
+    li.menu-item{
+      margin-bottom: 25px;
+      font-family: Courgette;
+      list-style-type: none;
+      a{
+        color: $color-2;
+      }
+    }
+    li.rezervasyon{
+      list-style-type: none;
+      background: rgba(255, 255, 255, .65);
+      margin-left: -25px;
+      padding: 10px;
+      a{
+        border:1px solid transparent;
+        display: block;
+        color: $color-2;
+        padding: 5px 10px;
+        text-decoration: none;
+        text-transform: capitalize;
+        i{
+          margin-right: 10px;
+        }
+        &:hover{
+          border-color: $color-2;
+        }
+      }
+    }
+  }
+}
+#content{
+  width: calc(100%);
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.otel-tanitim{
+  padding-bottom: 70px;
+  background: #fefefe;
+
+  img{
+    width: 100%;
+    margin-top: 30px;
+  }
+  h1{
+    margin-top: 50px;
+    color: $color-1;
+    font-size: 40px;
+    font-family: "Open Sans Semi Bold";
+    text-transform: capitalize;
+  }
+  p{
+    text-align: justify;
+    font-size: 14px;
+  }
+  .rakamlar{
+    padding-top: 10px;
+    .rakam{
+      cursor: pointer;
+      @include transition(300ms all);
+      @include shadow(0px 0px 5px -1px $color-4);
+      padding: 20px 0px;
+      text-align: center;
+      font-size: 13px;
+      span{
+        display: block;
+      }
+      &:hover{
+        @include transform(scale(1.03))
+      }
+    }
+  }
+  .desen{
+    background-image: url("../images/footer-desen.png") ;
+    background-repeat: repeat-x;
+    @include transform(rotate(180deg));
+    width: 100%;
+    height: 35px;
+  }
+}
+.odalar-suitler{
+  background: $color-3;
+  padding: 40px 0px;
+  .prod-item{
+    img{
+      width: 100%;
+      @include transition(300ms all)
+    }
+    position: relative;
+    display: block;
+    text-decoration: none;
+    &:hover{
+      img{
+        @include transform(scale(1.04))
+      }
+    }
+    p{
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-bottom: 15px;
+      margin-left: 15px;
+      color: #fff;
+      span{
+        font-size: 15px;
+        display: block;
+        opacity: .8;
+      }
+    }
+
+  }
+  .sec-title{
+    color: #5a1a1e;
+    text-align: center;
+    h2{
+      text-transform: capitalize;
+    }
+    p{
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+}
+h3{
+  font-size: 36px;
+}
+.btn-accent{
+  color: #5a1a1e !important;
+  background: #e4dfbd;
+  display: inline-block;
+  padding: 7px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  @include transition(300ms all);
+  &:hover{
+    @include shadow(0px 0px 5px -1px #333);
+  }
+}
+header{
+  background-image: url("../images/header-desen.png");
+  background-repeat: repeat-x;
+  text-align: center;
+  margin-bottom: -129px;
+  position: relative;
+  z-index: 2;
+  .brand{
+    display: inline-block;
+  }
+}
+.restorant-tanitim{
+  padding: 50px 0px;
+  background: #fefefe;
+  img{
+    width: 100%;
+  }
+  h1{
+    font-size: 40px;
+    color: #5a1a1e;
+    font-family: "Open Sans Semi Bold";
+  }
+  p{
+    font-size: 16px;
+    text-align: justify;
+  }
+
+}
+.bizi-taniyin{
+  background-image: url("../images/bizi-taniyin-bg.jpg");
+  color: #e4dfbd;
+  padding: 50px 0px;
+  text-align: center;
+  h3{
+    text-transform: capitalize;
+
+  }
+  p{
+    font-size: 20px;
+  }
+  a{
+    font-size: 18px;
+  }
+}
+.blog{
+  padding: 50px 0px;
+  h3{
+    text-transform: capitalize;
+    font-family: "Open Sans Semi Bold";
+    color: $color-1;
+    text-align: center;
+  }
+  p{
+    color: $color-1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .blog-item{
+    position: relative;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #c5baaf;
+
+    img{
+      width: 100%;
+    }
+    .blog-body{
+      padding: 40px 30px;
+      h4{
+        font-size: 18px;
+        color: rgba($color-1,.70 );
+      }
+      .blog-date{
+        position: absolute;
+        bottom: 15px;
+        left: 30px;
+        span{
+          color: $color-4;
+          font-size: 12px;
+          font-family: "Open Sans Semi Bold";
+          i{
+            color: $color-2;
+          }
+          &:first-child{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  background-image: url("../images/footer-desen.png") ;
+  background-repeat: repeat-x;
+  background-position:bottom;
+  padding-bottom: 35px;
+  .alt{
+    padding: 20px 0px;
+    .copyright{
+      color: $color-1;
+      font-size: 11px;
+    }
+    .sertifika{
+      img{
+        float: left;
+        margin-right: 15px;
+      }
+      font-size: 11px;
+    }
+    .sosyal{
+      text-align: right;
+      ul{
+        padding: 0;
+        overflow: hidden;
+        display: inline-block;
+        li{
+          list-style-type: none;
+          float: left;
+          margin-right: 15px;
+          a{
+            border-radius: 100px;
+            border: 1px solid $color-1;
+            color: $color-1;
+            width: 25px;
+            height: 25px;
+            display: block;
+            text-align: center;
+            @include transition(300ms all);
+            &:hover{
+              color: $color-3;
+              background: $color-1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ust{
+    padding: 20px 0px;
+    background: #e7e3c5;
+    color: $color-1;
+    .adres{
+      display: flex;
+      align-items: center;
+      i{
+        float: left;
+        margin-right: 15px;
+        font-size: 21px;
+      }
+      p{
+        float: left;
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  header{
+    margin-bottom: -66px;
+    background-position: 0px -60px;
+    .brand{
+      img{
+        width: 100px;
+      }
+    }
+  }
+  .odalar-suitler{
+    .prod-item{
+      margin-bottom: 15px;
+    }
+  }
+  .blog{
+    .blog-item{
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+  .otel-tanitim{
+    padding-bottom: 15px;
+  }
+  .odalar-suitler{
+    padding-bottom: 5px;
+  }
+  .restorant-tanitim{
+    padding-top: 15px;
+  }
+  .blog{
+    padding-bottom: 0px;
+  }
+  footer{
+    padding-bottom: 5px;
+    .ust{
+      padding-bottom: 5px !important;
+      .adres{
+        margin-bottom: 15px;
+      }
+    }
+    .alt{
+      .copyright{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .sosyal{
+        text-align: center;
+      }
+      .sertifika{
+        text-align: center;
+        img{
+          margin: auto;
+          float: none;
+        }
+      }
+    }
+  }
+
+
+}
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) {
+  .mfp-arrow-left{
+    left: -70px;
+  }
+  .mfp-arrow-right {
+    right: -70px;
+  }
+}
+@media (max-width: 1566px) {
+  #sidebar{
+    left: -220px;
+  }
+  .nav-toggle{
+    display: block;
+  }
+}
+
