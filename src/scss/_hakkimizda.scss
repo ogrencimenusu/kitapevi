@@ -1,0 +1,44 @@
+
+.page-hakkimizda{
+  .nav-pills{
+    margin-top: 30px;
+    border-bottom: 3px solid $color-2;
+    border-top: 3px solid $color-2;
+    li{
+      position: relative;
+      &:first-child{
+      margin-left: auto;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        border-right: 1px solid $color-1;
+        right: 0;
+        top: calc(80% - 25px);
+        height: 25px;
+        width: 1px;
+      }
+      &:last-child{
+        margin-right: auto;
+        &:after{
+          border-right: 0px;
+        }
+      }
+      a{
+        @include transition(300ms all);
+
+        color: $color-1;
+        font-size: 18px;
+        font-family: Courgette;
+        &:hover{
+          color: rgba($color-1,.70);
+
+        }
+        &.active{
+          background: transparent;
+          color: rgba($color-1,.50);
+        }
+      }
+    }
+  }
+}
