@@ -1,0 +1,81 @@
+.page-restoranbar{
+  .tanitim{
+    align-items: center;
+    p{
+      font-size: 15px;
+      color: $color-1;
+      text-align: justify;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .diger{
+    margin-bottom: 30px;
+    h3{
+      color: $color-1;
+      text-align: center;
+      font-size: 30px;
+      font-family: "Open Sans Semi Bold";
+      margin-bottom: 30px;
+    }
+  }
+  .menu{
+    height: 100%;
+    position: relative;
+    border:3px solid $color-1;
+    text-align: center;
+    &.second{
+      border-color: $color-2;
+      .title{
+        background: $color-2;
+        color: #FFFFFF;
+      }
+    }
+    .liste{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      ul{
+        margin-top: 1rem;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        margin-bottom: 3rem;
+        li{
+          list-style-type: none;
+          a{
+            color: $color-4;
+          }
+        }
+      }
+    }
+    .maske{
+      position: absolute;
+      height: 50%;
+      top: calc(50% - 25%);
+      left: -3px;
+      width: calc(100% + 6px);
+      z-index: 0;
+      background: $color-3;
+    }
+    .title{
+      color: #FFFFFF;
+      background: $color-1;
+      padding: 0px 20px;
+      display: inline-block;
+    }
+  }
+  .card{
+    @include transition(300ms all);
+    border-radius: 0;
+    border: 3px solid $color-2;
+    img{
+      border-radius: 0px;
+    }
+    &:hover{
+      opacity: .7;
+    }
+  }
+}

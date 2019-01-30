@@ -40,6 +40,12 @@ gulp.task('galeriJs', () => {
         .pipe(gulp.dest('dist/assets/_my/'))
         .pipe(browserSync.stream());
 });
+gulp.task('restoranvebarJs', () => {
+    return gulp.src('src/js/restoranvebar.js')
+        .pipe(concat('restoranvebar.js'))
+        .pipe(gulp.dest('dist/assets/_my/'))
+        .pipe(browserSync.stream());
+});
 gulp.task('mainJs', () => {
     return gulp.src('src/js/main.js')
         .pipe(concat('main.js'))
@@ -55,6 +61,7 @@ gulp.task('html', () => {
 gulp.task('delete', () => del([
     'dist/assets/_my/**/*.css',
     'dist/assets/_my/anasayfa.js',
+    'dist/assets/_my/restoranvebar.js',
     'dist/assets/_my/galeri.js',
     'dist/assets/_my/main.js',
     'dist/**/*.html'
@@ -64,6 +71,7 @@ gulp.task('watch', () => {
     gulp.watch("src/scss/**/*.scss", ['cssMy']);
     gulp.watch("src/js/anasayfa.js", ['anasayfaJs']);
     gulp.watch("src/js/galeri.js", ['galeriJs']);
+    gulp.watch("src/js/restoranvebar.js", ['restoranvebarJs']);
     gulp.watch("src/js/main.js", ['mainJs']);
     gulp.watch("src/**/*.html", ['html']);
 });
@@ -76,6 +84,7 @@ gulp.task('default', () => {
         'anasayfaJs',
         'mainJs',
         'galeriJs',
+        'restoranvebarJs',
         'browser-sync',
         'watch'
     );
