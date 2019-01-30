@@ -1,5 +1,18 @@
-.galeri-items{
-  width: 33.333%;
-  display: flex;
-  padding: 5px;
+.page-galeri{
+  .galeri-items{
+    width: 33.333%;
+    display: flex;
+    padding: 5px;
+    @include transition(300ms all);
+    .card{
+      border-radius: 0;
+      border: 3px solid $color-2;
+      img{
+        border-radius: 0px;
+      }
+    }
+    &:hover{
+      opacity: .7;
+    }
+  }
 }
