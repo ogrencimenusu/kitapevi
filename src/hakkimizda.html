@@ -100,6 +100,11 @@
                             Kitap Evi Otel Ailesi
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#pills-contact2">
+                            Kitap Evi Otel Ailesi 2
+                        </a>
+                    </li>
                 </ul>
                 <div class="tab-content text-center mb-5 mt-5" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
@@ -114,7 +119,30 @@
                         <br><br>
                         Osmanlı adabı taşıyan yüksek taş duvarlarla çevrili huzur dolu bahçeye bakan odalardan tarihi semtin hikayeler taşıyan sokakları görülebilmekte. Bir zamanlar içerisinden tarihi Pınarbaşı suyu geçermiş bahçenin. Şehrin tüm suları biraraya toplanınca adı artık sadece tapu kayıtlarında kalmış. Sular şehri Bursa‘da olduğunuzu hatırlayın diye hemen her odanın banyoları özel. Bazı odalarda dinlenme kuvetleri bulunuyor, bazılarında da hamamlar. İçerisinde girdiğinizde zamanın durduğunu hissettiğiniz Kitapevi restaurant... Geçmiş özlenen zamanların sükuneti, zerafeti. Bahçesi, ulu ağaçları, şömine başı sohbetleri, kitapları. Kitap evi Otel ile şehri yeniden farkedeceksiniz. Evinizden uzakta, Kitap evi Otelden anılar biriktirmeniz dileğiyle.
                     </div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel">Kitap evi otel ailesi</div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel">
+                        <div class="kapsa d-flex">
+                            <div class="flipbook-viewport">
+                                <div class="container">
+                                    <div class="flipbook">
+                                        <div style="background-image:url('assets/images/hakkimizda/resim.jpg')"></div>
+                                        <div style="background-image:url('assets/images/hakkimizda/resim1.jpg')"></div>
+                                        <div style="background-image:url('assets/images/hakkimizda/resim2.jpg')"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact2" role="tabpanel">
+                       <div class="row">
+                           <div class="col-lg-4">
+                               <div class="card">
+                                   <div class="img">
+                                       <img src="http://bilgeinox.com.tr/images/ergun-bilge.jpg" alt="">
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -208,5 +236,47 @@
 
 <!-- Main JS -->
 <script src="assets/_my/main.js"></script>
+
+<!-- Turnjs JS -->
+<script type="text/javascript" src="assets/turnjs-4/modernizr.2.5.3.min.js"></script>
+
+<script>
+    function loadApp() {
+
+        // Create the flipbook
+
+        $('.flipbook').turn({
+            // Width
+            width:922,
+
+            // Height
+
+            height:600,
+
+            // Elevation
+
+            elevation: 50,
+
+            // Enable gradients
+
+            gradients: true,
+
+            // Auto center this flipbook
+
+            autoCenter: true
+
+        });
+    }
+
+    // Load the HTML4 version if there's not CSS transform
+
+    yepnope({
+        test : Modernizr.csstransforms,
+        yep: ['assets/turnjs-4/turn.min.js'],
+        nope: ['assets/turnjs-4/turn.html4.min.js'],
+        both: ['assets/turnjs-4/basic.css'],
+        complete: loadApp
+    });
+</script>
 </body>
 </html>

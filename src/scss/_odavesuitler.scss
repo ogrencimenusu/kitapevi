@@ -1,0 +1,74 @@
+.page-odavesuitler{
+  .oda-item{
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    .card{
+      width: 100%;
+      padding-bottom: +40px;
+      border: 3px solid $color-2;
+      overflow: hidden;
+      @include transition(all 300ms ease);
+
+      .card-img-top {
+        @include transition(all 300ms ease);
+        overflow: hidden;
+        border-radius: 0px;
+
+        img{
+          width: 100%;
+         @include transition(all 300ms ease);
+        }
+      }
+
+      .card-title{
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 26px;
+        color: $color-1;
+      }
+      ul{
+        padding: 0%;
+        li{
+          list-style-type: none;
+          margin-bottom: 10px;
+          font-size: 13px;
+          &:nth-last-child(1){
+            margin-bottom: 0px;
+          }
+          i{
+            color: $color-1;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+          }
+        }
+      }
+      .btn{
+        @include shadow(none);
+        background: $color-2;
+        color: $color-1;
+        position: absolute;
+        bottom: 0%;
+        right:  0%;
+        border-radius: 0;
+        &:hover{
+          background:$color-1 !important;
+          color: $color-2 !important;
+        }
+      }
+    }
+    :hover{
+      border-color: $color-1;
+      .card-img-top {
+        img{
+          @include transform(scale(1.1));
+        }
+      }
+    }
+  }
+}

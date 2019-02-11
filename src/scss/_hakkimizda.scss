@@ -40,4 +40,23 @@
       }
     }
   }
+  .kapsa{
+    overflow: hidden;
+    height: 600px;
+  }
+  #pills-contact2{
+    .card{
+      background: transparent;
+      border: none;
+      .img{
+        background-image: url(../images/footer-desen.png);
+        padding: 30px;
+        background-size: 100px;;
+        img{
+          width: 100%;
+          border: 5px solid $color-2;
+        }
+      }
+    }
+  }
 }
